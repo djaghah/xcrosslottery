@@ -179,7 +179,7 @@
         return;
       }
 
-      fetch(`https://api.multiversx.com/collections/${collection}/accounts`)
+      fetch(`https://api.multiversx.com/collections/${collection}/accounts?from=0&size=10000`)
         .then(res => res.json())
         .then(data => {
           accountData = data.filter(acc => !exclude.includes(acc.address));
